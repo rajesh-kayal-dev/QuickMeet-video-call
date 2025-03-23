@@ -9,7 +9,7 @@ const VideoRoom = () => {
     let myMeeting = async (element) =>{
         const appID = 384660371;
         const serverSecret = "16fa7fbbb9f0a3ad3fa5d92decc6c112";
-        const kitToken =  ZegoUIKitPrebuilt.generateKitTokenForTest(appID, serverSecret, roomId,Date.now().toString(),`uid:${roomId}`);
+        const kitToken =  ZegoUIKitPrebuilt.generateKitTokenForTest(appID, serverSecret, roomId,Date.now().toString(),`${roomId}`);
         const zp = ZegoUIKitPrebuilt.create(kitToken);
         zp.joinRoom({
             container: element,
