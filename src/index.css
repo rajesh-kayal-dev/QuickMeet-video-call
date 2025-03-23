@@ -1,0 +1,106 @@
+/* Basic resets */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+  background: #202124;
+
+  font-family: "Roboto", Arial, sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  color: #fdfdfd;
+}
+
+/* Home container */
+#home {
+  width: 450px;
+  text-align: left;
+  padding: 20px;
+}
+
+/* Title styling */
+.title {
+  font-size: 32px;
+  font-weight: 400;
+  margin-bottom: 8px;
+}
+
+/* Subtitle styling */
+.subtitle {
+  font-size: 16px;
+  color: #5f6368;
+  margin-bottom: 20px;
+}
+
+/* Input field styling */
+input {
+  width: 100%;
+  padding: 10px 15px;
+  font-size: 16px;
+  border: 1px solid #dadce0;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  outline: none;
+  transition: 0.2s ease;
+}
+
+/* Input focus effect */
+input:focus {
+  border-color: #1a73e8;
+  box-shadow: 0 0 3px #1a73e8;
+}
+
+/* Button styling */
+button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-right: 10px;
+  transition: background 0.3s ease;
+}
+
+/* New meeting button */
+button:first-of-type {
+  background-color: #1a73e8;
+  color: #fff;
+  font-weight: bold;
+}
+
+/* Join button (disabled look initially) */
+button:last-of-type {
+  background-color: #e8eaed;
+  color: #9aa0a6;
+  cursor: not-allowed;
+}
+
+/* Enable Join button only when input is valid */
+input:not(:placeholder-shown) + button + button {
+  background-color: #1a73e8;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* Button hover effect */
+button:hover:enabled {
+  opacity: 0.9;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 480px) {
+  #home {
+    width: 90%;
+  }
+
+  button {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+}
